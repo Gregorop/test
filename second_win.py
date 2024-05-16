@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QTime, QTimer
+from PyQt5.QtGui import QPixmap
 
 from final_win import *
 
@@ -33,8 +34,9 @@ class SecondWin(QWidget):
         fio_input = QLineEdit()
 
         instr1 = QLabel(txt_test)
-        
-
+        pic_label = QLabel()
+        pic = QPixmap('cat.jpg')
+        pic_label.setPixmap(pic)
         
         
 
@@ -58,6 +60,7 @@ class SecondWin(QWidget):
         line.addWidget(fio_input)
         
         line.addWidget(instr1)
+        line.addWidget(pic_label)
 
         line.addWidget(self.answ1_input)
         line.addWidget(self.answ1_input)
